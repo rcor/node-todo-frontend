@@ -4,7 +4,13 @@ const chai = require('chai')
 	, TodoRequestOptions = require('./TodoRequestOptions')
 	, nock = require('nock')
 	, url = require("url");
-
+var mocha = new Mocha({
+    reporter: 'mocha-junit-reporter',
+    reporterOptions: {
+        testsuitesTitle: true,
+        suiteTitleSeparatedBy: '.' // suites separator, default is space (' ')
+    }
+});
 
 function parsedUrl(todoRequestOptions, filter) {
 	var apiUrl = todoRequestOptions.getUrl(filter)
