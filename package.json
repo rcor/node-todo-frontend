@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js",
-    "test": "mocha --reporter mocha-junit-reporter-reporter-options mochaFile=test_result.xml -R spec src/**/*.spec.js",
+    "test": "mocha --reporter mocha-junit-reporter --reporter-options mochaFile=test_result.xml -R spec src/**/*.spec.js",
     "bowerInstall": "bower install",
     "bowerInstallDocker": "bower install --allow-root"
   },
